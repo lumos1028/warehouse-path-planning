@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仓储机器人路径规划系统</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🤖 仓储机器人路径规划系统</h1>
+            <p class="subtitle">A* 最短路径算法 | 多机器人协调</p>
+        </header>
+
+        <main class="main">
+            <div class="sidebar">
+                <div class="panel">
+                    <h3>操作面板</h3>
+                    <div class="control-group">
+                        <label>模式选择：</label>
+                        <div class="mode-selector">
+                            <button class="mode-btn active" data-mode="single">单机器人</button>
+                            <button class="mode-btn" data-mode="multiple">多机器人</button>
+                        </div>
+                    </div>
+
+                    <div id="singleMode" class="control-group">
+                        <div class="info-box">
+                            <p>🟩 点击选择起点</p>
+                            <p>🟥 点击选择终点</p>
+                            <p>👆 然后点击"开始规划"</p>
+                        </div>
+                        <div class="coordinate-display">
+                            <div><strong>起点:</strong> <span id="startPoint">未设置</span></div>
+                            <div><strong>终点:</strong> <span id="goalPoint">未设置</span></div>
+                        </div>
+                        <button id="planBtn" class="btn btn-primary">开始规划</button>
+                        <button id="resetBtn" class="btn btn-secondary">重置</button>
+                    </div>
+
+                    <div id="multipleMode" class="control-group" style="display: none;">
+                        <label>机器人数量：
+                            <input id="robotCount" type="number" min="1" max="10" value="3">
+                        </label>
+                        <button id="generateRobotsBtn" class="btn btn-primary">生成随机任务</button>
+                        <button id="planMultipleBtn" class="btn btn-primary">规划所有路径</button>
+                        <button id="resetMultipleBtn" class="btn btn-secondary">重置</button>
+                        <div id="robotsList" class="robots-list"></div>
+                    </div>
+
+                    <div class="stats">
+                        <h4>统计信息</h4>
+                        <div id="stats" class="stats-content">
+                            <p>等待规划...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <div id="mapCanvas" class="map-canvas"></div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color empty"></div>
+                    <span>空地</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color obstacle"></div>
+                    <span>障碍</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color start"></div>
+                    <span>起点</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color goal"></div>
+                    <span>终点</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color path"></div>
+                    <span>路径</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color robot"></div>
+                    <span>机器人</span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>使用 Python Flask + A* 算法 | 支持多个机器人并行规划</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
