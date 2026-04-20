@@ -1,29 +1,43 @@
+<div align="center">
+
 # 🤖 仓储机器人路径规划系统
 
-一个专业的二维仓库路径规划系统，使用 A* 算法计算最短路径，支持单机器人和多机器人场景，提供现代化的网页可视化界面。
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)
+![Flask](https://img.shields.io/badge/Flask-2.0%2B-green?style=flat-square&logo=flask)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
+![Algorithm](https://img.shields.io/badge/Algorithm-A*%20Pathfinding-orange?style=flat-square)
 
-## 特性
+一个的二维仓库路径规划系统，使用 A* 算法计算最短路径，支持单机器人和多机器人场景，提供现代化的网页可视化界面。
 
-✨ **智能路径规划**
-- A* 算法实现，保证最短路径
-- 支持任意起点和终点
-- 自动避免障碍物
+</div>
 
-🤖 **多机器人支持**
-- 单机器人精确规划
-- 多机器人并行规划
-- 实时显示规划结果
+---
 
-🎨 **现代化界面**
-- 响应式网页设计
-- 高级色彩方案
-- 流畅的交互体验
-- 实时网格可视化
+## ✨ 核心特性
 
-⚡ **高效性能**
-- 快速路径计算
-- 支持 50x50 的大地图
-- 支持多达 10 个机器人同时规划
+<div align="center">
+<table>
+  <tr>
+    <td align="center"><b>🧠 智能路径规划</b></td>
+    <td align="center"><b>🤖 多机器人支持</b></td>
+    <td align="center"><b>🎨 现代化界面</b></td>
+    <td align="center"><b>⚡ 高效性能</b></td>
+  </tr>
+  <tr>
+    <td>• A* 算法保证最短路径<br>• 任意起点/终点支持<br>• 自动避障</td>
+    <td>• 单机器人精确规划<br>• 多机器人并行规划<br>• 实时结果展示</td>
+    <td>• 响应式设计<br>• 高级色彩方案<br>• 流畅交互体验<br>• 网格可视化</td>
+    <td>• 快速路径计算<br>• 支持 50×50 大地图<br>• 10+ 机器人并行</td>
+  </tr>
+</table>
+</div>
+
+---
+
+## 📁 项目结构# 
 
 ## 项目结构
 
